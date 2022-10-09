@@ -509,6 +509,11 @@ div#mycrawler a:hover {
   font-size: 13px;
 }
 
+.header-recent-blog h3 {
+  text-align: left;
+  font-weight: 600;
+}
+
 .page-heading .title {
   font-size: 27px;
   font-weight: 800;

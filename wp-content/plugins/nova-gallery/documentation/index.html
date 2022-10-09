@@ -1,0 +1,457 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en-GB">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Nova Gallery WP Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		h4 { font-weight: bold;}
+		pre { background: #f8f8f8; border: 1px solid #e1e1e1; padding: 20px; }
+	</style>
+
+</head>
+
+
+<body>
+	<div class="container">
+
+		<h3 class="center alt">&ldquo;Nova Gallery WP&rdquo; Documentation by &ldquo;Nilok Bose&rdquo; v1.4.2</h3>
+
+		<hr>
+
+		<h1 class="center">&ldquo;Nova Gallery WP&rdquo;</h1>
+
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 28/03/2013<br>
+					Updated: 16/07/2015<br>
+					By: Nilok Bose<br>
+					Email: <a href="mailto:cosmocoder@gmail.com">cosmocoder@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->
+
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my item. If you have any questions that are beyond the scope of this help
+				file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/cosmocoder">here</a>. Thanks so much!
+				</p>
+			</div>
+		</div><!-- end div .borderTop -->
+
+		<hr>
+
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#intro">Introduction</a></li>
+			<li><a href="#install">Installing the Plugin</a></li>
+			<li><a href="#howto">How to Use</a></li>
+			<li><a href="#embed">Embed Galleries</a></li>
+		</ol>
+
+		<hr>
+
+
+
+		<h3 id="intro"><strong>A) Introduction</strong> - <a href="#toc">top</a></h3>
+
+		<p>Nova Gallery WP makes it easy to embed the <a href="http://codecanyon.net/item/nova-gallery-responsive-html5-multimedia-gallery/3766022">
+		   Nova Gallery &ndash; Responsive HTML5 Multimedia Gallery</a>, available at Codecanyon, in your Wordpress theme. It displays all your images,
+		   audio files and video files in a sleek and attractive interface. You have the option of presenting your items in two different modes,
+		   which are a Thumbnail Grid and Fullwidth view, and you also have the option of switching between the two modes. You can have multiple sets/albums of
+		   items and can filter the gallery items based on file type or based on custom categories. The gallery features a fluid responsive design and can fit in any screen size ranging from mobile
+		   phones to desktop browsers. The gallery also features touch-screen support and uses hardware accelerated CSS based animations wherever possible which
+		   results in smooth animations, that is especially noticeable in mobile devices. Nova Gallery WP allows you to create multiple galleries where
+		   each gallery can have as many items/sets as you want. Although Nova Gallery WP allows you to create multiple galleries you can only embed one gallery per
+		   post/page.
+		</p>
+
+
+		<p>Please note that the CSS3 based animations and effects and other advanced HTML5 features will not work in older browsers such as IE9 and below. For older
+		   browsers suitable fallbacks have been provided so that the user experience and aesthetics of the gallery are not reduced. Hence visitors to your web page
+		   using old browsers will still see a nicely working gallery.
+		</p>
+
+
+		<hr>
+
+
+		<h3 id="install"><strong>B) Installing the plugin</strong> - <a href="#toc">top</a></h3>
+
+		<p>To install the plugin follow the steps below: </p>
+
+		<ol>
+			<li>Log in to the Wordpress admin panel.</li>
+			<li>Head over to Plugins section and click on the &ldquo;Add New&rdquo; button</li>
+			<li>Then click &ldquo;Upload&rdquo; to bring up the plugin upload dialog. Select the plugin file and upload it. Alternatively you could also
+				unpack the plugin zip file in your computer and then upload it to <strong>/wp-content/plugins</strong> via FTP.</li>
+			<li>Next go to the Plugins main area and you will see <strong>Nova Gallery WP</strong> being listed as one of the available plugins.</li>
+			<li>Click the &ldquo;Activate&rdquo; button next to it and you are done.</li>
+		</ol>
+
+		<p>If you are upgrading from an older version then just replace the old plugin files in your server with the new ones. All your previously created galleries
+     		will be retained when upgrading.</p>
+
+
+
+		<hr>
+
+
+
+		<h3 id="howto"><strong>C) How to Use</strong> - <a href="#toc">top</a></h3>
+
+		<p>After activating the plugin you will see that a new menu item has been created on the left sidebar called <strong>Nova Gallery</strong>. This menu item has two
+		   sub menus - <strong>Gallery Manager</strong> and <strong>Create New Gallery</strong>. These names are self explanatory and whenever you want to
+		   create a new gallery you will head over to the <strong>Create New Gallery</strong> page, and all your existing galleries will be listed in the
+		   <strong>Gallery Manager</strong> page, from where you can edit or delete galleries, and also get the shortcodes for embedding galleries.
+		</p>
+
+		<p>So first of all to create a new gallery head over to the appropriate page and you will be presented with a list of options. They are described
+			below:
+		</p>
+
+		<h4>Gallery name</h4>
+
+		<p>You must provide a name to the gallery that you are going to create. This is a required field and you will receive an error if you leave it
+			empty. Although different galleries can have the same name but it is advisable that you provide unique names so that it is helpful for
+			you to quickly differentiate between galleries.
+		</p>
+
+		<hr>
+
+		<h4>Gallery description</h4>
+
+		<p>You can write a description for the gallery here. This field is optional.</p>
+
+		<hr>
+
+
+		<h4>Gallery Options</h4>
+
+		<p>A list of options that are applicable to the gallery. Their functions are described as follows:</p>
+
+		<ul>
+			<li><strong>Colour Scheme</strong> - Two colour schemes are available. Choose one from the available list.</li>
+
+			<li><strong>Starting mode</strong> - Choose whether the Thumbnail Grid or the Fullwidth mode will be shown when the page first loads.</li>
+
+			<li><strong>Resize to fit media in Fullwidth mode</strong> - By default the images/video loaded in the Fullwidth mode, when the page first loads, are shown in their actual size, even if that exceeds the gallery container.
+			But if this option is enabled then the images/video in Fullwidth mode, when the page first loads, will be resized maintaining aspect ratio to fit inside the gallery container.
+			</li>
+
+			<li><strong>Show Thumbnails in Fullwidth mode</strong> - You can enable this option to show the item thumbnails in Fullwidth mode when the gallery first loads.</li>
+
+			<li><strong>Appearing animation for Thumbnail Grid</strong> - Choose the animation that will be used to make the thumbnails appear on page, when the page first loads in the Thumbnail Grid mode.</li>
+
+			<li><strong>Animation for captions in Thumbnail Grid</strong> - You can choose the animation for showing captions for items in Thumbnail Grid mode.</li>
+
+			<li><strong>Always show item titles</strong> - You can choose to make the gallery item titles in Thumbnail Grid mode always visible, instead of only showing them on hover.</li>
+
+			<li><strong>Spacing between thumbnails</strong> - If you want some spacing between the item thumbnails in Thumbnail Grid mode then you can mention that value here in px. By default this is zero.</li>
+
+			<li><strong>Transition effect in Fullwidth mode</strong> - Choose the transition effect for switching between items in Fullwidth mode.</li>
+
+			<li><strong>Animation for Gallery Sets page</strong> - If you have created sets for your gallery then you can choose the animation for showing/hiding the Gallery Sets page.</li>
+
+			<li><strong>Display type of the gallery</strong> - If the gallery needs to stretch across the browser window and is a body level element, then choose &ldquo;window&rdquo;, else if the gallery should only stretch across its parent container then choose &ldquo;container&rdquo;.</li>
+
+			<li><strong>Open Links in New Windows</strong> - You can choose to open the links associated with gallery thumbnails in a new window/tab instead of the same window/tab
+			as the gallery (which is the default option).
+			</li>
+
+			<li><strong>Youtube Thumbnails</strong> - If this is enabled then thumbnails for Youtube videos will be pulled from Youtube.</li>
+
+			<li><strong>Vimeo Thumbnails</strong> - If this is enabled then thumbnails for Vimeo videos will be pulled from Vimeo.</li>
+
+			<li><strong>Shuffle Gallery items</strong> - If this is enabled then gallery items will be randomly ordered when the page refreshes every time.</li>
+
+			<li><strong>Preload Images</strong> - You can enter the number of items whose full-size images will be preloaded in the background for the Fullwidth mode. This allows
+			for smoother viewing of items in this mode. But please don't enter a large number as that can result in unnecessary downloading of large images which the user may never view,
+			and is most definitely not recommended for mobile devices since they have lower bandwidth.
+			</li>
+
+			<li><strong>Fullwidth Slideshow</strong> - If you want to start the slidehsow in Fullwidth mode when the page first loads then enable this option.</li>
+
+			<li><strong>Pause interval for slideshow</strong> - You can set the time interval, in ms, for which an item will remain visible during the slideshow before advancing to the next item.</li>
+
+			<li><strong>Stop slideshow when page hidden</strong> - By default the gallery pauses the Fullwidth mode slideshow (inlcuding any audio/video playback) when the page loses focus. This helps prevent unnecessary consumption of resources, which is especially desirable for mobile devices. But if for whatever reason you want to disable this feature then you can do so.</li>
+
+			<li><strong>Detect Mobile Devices</strong> - You have the option of detecting mobile devices and serving them low resolution videos, which you can upload below.</li>
+
+			<li><strong>Autoplay Video and Audio</strong> - Enable this to start playing video/audio files automatically when the media player shows up. This setting will also affect Youtube/Vimeo videos.</li>
+
+			<li><strong>Play in a Loop</strong> - Enable this option to play video/audio files continuously in a loop. This setting will not affect Youtube/Vimeo videos.</li>
+
+			<li><strong>Store Volume Level</strong> - Enable this option to retain the volume level of the player when it is closed and volume will be set to that level when the player
+				is opened again. This setting will not affect Youtube/Vimeo videos.
+			</li>
+
+			<li><strong>Custom Categories</strong> - Enter a comma separated list of custom category names that will be displayed in the filter menu bar at the top in the gallery.</li>
+
+			<li><strong>Show File Type Buttons</strong> - Enable this option to show file type buttons (photo, audio, video) in the filter menu. If you have custom categories then you may not need to show these buttons.</li>
+
+			<li><strong>Hide Gallery Menu</strong> - You can choose to hide the gallery menu completely.</li>
+
+			<li><strong>Starting Category</strong> - Choose the starting category whose items will be shown when the page first loads.</li>
+
+			<li><strong>Hide Thumbnail Grid Mode</strong> - If you don't want the Thumbnail Grid mode then you can enable this. Please note that for this to take effect you will also
+			have to set the starting mode to Fullwidth. When this is enabled then the View mode buttons in the gallery menu bar will also be hidden.
+			</li>
+
+			<li><strong>Hide Fullwidth Mode</strong> - If you don't want the Fullwidth mode then you can enable this. Please note that for this to take effect you will also
+			have to set the starting mode to Thumbnail Grid. When this is enabled then the View mode buttons in the gallery menu bar will also be hidden.
+			</li>
+
+			<li><strong>Flickr/Picasa Cache</strong> - Enable this option to cache Flickr/Picasa API query results.</li>
+
+			<li><strong>Time interval for caching</strong> - You can set the time interval, in minutes, for which the the Flickr/Picasa API data will be cached before making a fresh call again.</li>
+
+			<li><strong>Flickr Photos</strong> - If you want the gallery show photos from Flickr then enable this option. When this is enabled then you will be presented with options to configure
+			the pulling of photos from Flickr.
+			</li>
+
+			<li><strong>Picasa Photos</strong> - If you want the gallery to show photos from Picasa then enable this option. When this is enabled then you will be presented with options to configure
+			the pulling of photos from Picasa.</li>
+		</ul>
+
+
+		<hr>
+
+		<h4>Flickr Options</h4>
+
+		<p>Here you are given the options to configure the pulling of photos from Flickr and choose the manner of displaying them.</p>
+
+		<ul>
+			<li><strong>API Key</strong> - Your Flickr API key is required in order to pull photos from Flickr.</li>
+
+			<li><strong>Flickr Source</strong> - You can choose the source from which photos are pulled. Available options are &ldquo;text search&rdquo;, &ldquo;tags&rdquo;, &ldquo;user&rdquo;, &ldquo;set&rdquo;, &ldquo;group&rdquo; and &ldquo;collection&rdquo;.</li>
+
+			<li><strong>ID of Source</strong> - If you choose the source as &ldquo;user&rdquo; or &ldquo;set&rdquo; or &ldquo;group&rdquo; or &ldquo;collection&rdquo; then you need to mention the ID number of that.
+			If your source is &ldquo;text search&rdquo; then write down the search string. If your source is &ldquo;tags&rdquo; then write down a comma separated list of tag names.
+			</li>
+
+			<li><strong>User ID for Collection</strong> - If your source type is &ldquo;collection&rdquo; then you need to mention the user id of the owner of the collection.</li>
+
+			<li><strong>Number of albums to show</strong> -  If your sourceType is &ldquo;collection&rdquo; then you can choose to show only a specific number of albums from that collection, and that number (a positive integer) is passed to this parameter. By default all the albums in a collection is shown, which can be done by passing the string <code>"all"</code> to this parameter or leaving the field blank.</li>
+
+			<li><strong>Number of Flickr photos</strong> - You can set the number of photos that will be pulled from Flickr. Your Flickr API key may have some restrictions on the number of photos that you can pull at a time.</li>
+
+			<li><strong>Sort Order</strong> - You can choose how the photos from Flickr will be sorted and displayed in the page.</li>
+
+			<li><strong>Thumbnail Size</strong> - Choose the size of the thumbnail that will be shown in the Thumbnail Grid mode.</li>
+
+			<li><strong>Large Image Size</strong> - Choose the size of the large image that will be shown in the Lightbox in Thumbnail Grid mode and also in the Fullwidth mode.</li>
+		</ul>
+
+		<hr>
+
+
+		<h4>Picasa Options</h4>
+
+		<p>If you have chosen to show photos from Picasa then you can configure here how photos are pulled from Picasa and displayed in the page.</p>
+
+		<ul>
+			<li><strong>Source</strong> - Choose the source from which photos will be pulled from Picasa.</li>
+
+			<li><strong>User Name</strong> - If your source is &ldquo;user&rdquo; then mention the username here. If your source is &ldquo;album&rdquo; or &ldquo;collection&rdquo; then you need to mention
+			the username of the owner of that album or collection.
+			</li>
+
+			<li><strong>Album ID</strong> - If your source is &ldquo;album&rdquo; then you need to mention the id of that album here.</li>
+
+			<li><strong>Search Text</strong> - If your source is &ldquo;text search&rdquo; then enter the search string here.</li>
+
+			<li><strong>Number of albums to show</strong> -  If your sourceType is &ldquo;collection&rdquo; then you can choose to show only a specific number of albums from that collection, and that number (a positive integer) is passed to this parameter. By default all the albums in a collection is shown, which can be done by passing the string <code>"all"</code> to this parameter or leaving the field blank.</li>
+
+			<li><strong>Number of photos</strong> - You can enter the number of photos that will be pulled from Picasa.</li>
+
+			<li><strong>Thumbnail Size</strong> - Choose the size of the thumbnail that will be shown in Thumbnail Grid mode.</li>
+
+			<li><strong>Large Image Size</strong> - Choose the size of the large image that will shown in the Lightbox in Thumbnail Grid mode and also in Fullwidth mode.</li>
+		</ul>
+
+
+
+		<hr>
+
+		<h4>Upload Gallery Files</h4>
+
+		<p>In this section you are given the option to upload the gallery media files. There are three sections for separate uploading of image, audio and video files. Note that
+		   Nova Gallery uses the Wordpress Media Library so if any of your intended files are already present in the Library then you do not need to upload it again. Whatever file you upload
+		   in the Media Library you can select those files when configuring the gallery items below. Also note that if you intend to use the same image as both the thumbnail version and as the
+		   large version then uploading it only once will suffice and the gallery will generate the thumbnail for you based on the size you mention (more on that later).
+		</p>
+
+
+
+		<hr>
+
+		<h4>Gallery Sets &amp; Items</h4>
+
+		<p>This section allows you to add gallery items and sets and also configure them. First of all you can choose whether you want to have sets/albums in the gallery. Based on that
+		   choice you will be presented with two different ways of adding items in the gallery. The items/sets that you create can be sorted into any order by dragging them, and that also
+		   holds for items present inside a set. You are also given the option to choose whether the thumbnails that are generated by the plugin are cropped from the original image based on your
+		   specified size or will they be scaled maintaining aspect ratio. The configuration options for the items are described below.
+		</p>
+
+
+		<ul>
+			<li><strong>Set Name</strong> - If you have enabled sets in your gallery then when you create sets you can mention the name of the set here, that will displayed in the gallery sets page. </li>
+
+			<li><strong>Set Thumbnail</strong> - You can choose the thumbnail for representing the set. This is optional, and if no thumbnail is set then the thumbnail of the first item in the set will be used.</li>
+
+			<li><strong>File Type</strong> - Choose the file type of the item, i.e. whether it is a photo, audio or video.</li>
+
+			<li><strong>Category</strong> - Enter a comma separated list of category names to which this item belongs. The list of category names entered here should be present in the list of custom categories entered earlier.</li>
+
+			<li><strong>Thumbnail</strong> - Choose the image that will used as thumbnail for the item.</li>
+
+			<li><strong>Thumbnail Size</strong> - If you have set the same image file as both the thumbnail and as the large image then enter the dimensions of the thumbnail here that will be used to generate the thumbnail from the chosen image file.</li>
+
+			<li><strong>Large Image</strong> - Select the image that will be shown as the large image in the gallery for &ldquo;photo&rdquo; file type. If the file type is &ldquo;audio&rdquo; or &ldquo;video&rdquo; then this image will be used as the poster.</li>
+
+			<li><strong>Audio Files</strong> - If your file type is audio then you will be given the option to select the mp3 and ogg formats of your audio file. If you only upload the mp3 format then in browsers that don't support it natively,
+			like Firefox, Flash will be used to play that file.</li>
+
+			<li><strong>Video Files</strong> - If your file type is video then you will be given the option to select the mp4, webm and ogv formats of your video file. If you chose to detect mobile devices then you are given the option to upload
+			a low resolution mp4 video file specifically for mobile devices. If you only upload a mp4 file then Flash will be used to play it in browsers that don't support it natively.</li>
+
+			<li><strong>Youtube Video</strong> - If you chose video file type then you can enter a Youtube video link instead of uploading files. The link should be of the form <strong>http://www.youtube.com/watch?v=abcdefghijk</strong>.
+			Any other form of the link won't work.</li>
+
+			<li><strong>Vimeo Video</strong> - If you chose video file type then you can enter a Vimeo video link instead of uploading files. The link should be of the form <strong>http://vimeo.com/12345678</strong>. Any other form of the link won't work.</li>
+
+			<li><strong>Title</strong> - Enter the title for the gallery item, which will be displayed in the Coverflow and Thumbnail modes and also in the Lightbox.</li>
+
+			<li><strong>Caption</strong> - Here you can write a short description of the gallery item. This field can contain any html code.</li>
+
+			<li><strong>Link</strong> - If you would like the thumbnails of the gallery items in Thumbnail Grid mode to act as links to external pages then you can enter the url of that link here. In Fullwidth mode
+			the large image will act as the link.
+			</li>
+		</ul>
+
+		<hr>
+
+
+		<p>Whenever you want to create a new gallery then the form on that page will be filled out with default option values, so that you only have to create the
+		   gallery items in order to make your gallery work. You can just change the settings that you want to customise and save the gallery
+		   settings. Needless to say, whenever you are going to edit an existing gallery, the same page will open and all the form fields will be filled out
+		   with the settings with which you created the gallery.
+		</p>
+
+
+		<p>If you want to delete an uploaded file then you can delete it directly from the WP Media Library or you can open the uploading modal box from the uploading section in the gallery
+		   and find the file from the library and delete it. Just clear out the text field for that file in the item settings and save your settings.
+		</p>
+
+		<h4>Multimedia files</h4>
+
+		<p>As already stated Nova Gallery supports images, audio and video. When viewing images in the Lightbox in Thumbnail Grid mode, if the dimensions of the image is bigger than the browser window dimensions
+		   then that image will be resized to fit inside the browser window. For playing audio and video Nova Gallery uses <a href="http://mediaelementjs.com/">Mediaelement.js</a>. This is a
+		   HTML5 audio and video player. For browsers that do not support HTML5 audio or video playback, Mediaelement.js enables fallback to Flash and Silverlight. Now different browsers
+		   require different file formats for native playback of HTML5 audio and video. For audio you must upload a mp3 version of the file which is supported by Safari, Chrome and IE9.
+		   You must upload an ogg version if you want to have native playback in Firefox and Opera. The ogg format is also supported by Chrome. But you can upload only the mp3 version and
+		   Mediaelement.js will use Flash to play the audio file in Firefox and Opera. Similarly for the case of video playback, if you want to have a wide range of browsers natively play
+		   the video, then you must upload mp4, webm and ogv versions of the video. But here also you can only upload a mp4 version (h.264) and Mediaelement.js will use Flash or Silverlight
+		   to play the video in browsers that do not support that format. If you use only mp4 (h.264) videos and find that when there is Flash fallback in unsupported browsers, the entire
+		   video needs to be downloaded before it can be watched, then the index of the mp4 file is placed at the end. To remedy this case use the utility <a href="http://renaun.com/blog/code/qtindexswapper/">QTIndexSwapper</a>
+		   on your mp4 files. If you find that after uploading Nova Gallery to your server your browser is not able to play video files then you may need to configure your server in order to
+		   enable it to stream video files. For an Apache server place the following code in an .htaccess file and place it at the root of your website.
+		</p>
+
+<pre class="prettyprint">
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
+AddType video/webm .webm
+</pre>
+
+
+		<h4>Keyboard Shortcuts</h4>
+
+		<p>Nova Gallery also provides some handy keyboard shortcuts to facilitate easier browsing. You can press <strong>LEFT</strong> and <strong>RIGHT</strong> keys to flip through the items
+		   in the Fullwidth mode and also when the Lightbox is open in Thumbnail Grid mode. In order to close the Lightbox in Thumbnail Grid mode you can press <strong>ESC</strong>.
+		   Pressing <strong>ESC</strong> will also close the caption overlay in Fullwidth mode.
+		</p>
+
+
+
+		<h4>Responsive Design</h4>
+
+		<p>Nova Gallery features a fluid responsive design and thus can adapt itself to be viewed in desktop browsers as well as in mobile devices. You can also place the gallery in any container
+		   of a particular width (choose display style as &ldquo;Container&rdquo; for this case). By default the gallery will stretch across the entire browser window.
+		   To have the best effect for the responsive design the gallery should be in a page all by itself and as a body (root) level element, meaning that it should
+		   not be placed inside any container. That way the responsive design of the gallery will function fully when the browser width changes. You can see this effect by
+		   opening the demo of the gallery in Codecanyon in your browser and resizing its width.
+		</p>
+
+
+
+		<hr>
+
+
+		<h3 id="embed"><strong>D) Embed galleries</strong> - <a href="#toc">top</a></h3>
+
+		<p>All the galleries that you create will be visible in the Gallery Manager page. When you go to that page you will see that each gallery has a
+		   field in the table titled <strong>shortcode</strong>. In this field you will see the shortcode that is required for embedding a particular gallery.
+		   Just copy the shortcode for a gallery, that is displayed there and then head over to Posts section in Wordpress. Open any post or page where you want
+		   to have a gallery, in the Wordpress editor, and then paste the shortcode at a place where you find suitable, and then save or publish that post or
+		   page. Then open that post/page in your browser and you will see the gallery in action with all the settings that you created it with. If you want to directly
+		   write the embed code in a Wordpress template file then you will have to use the <a href="http://codex.wordpress.org/Function_Reference/do_shortcode">do_shortcode</a>
+		   function. Using this function has the advantage that you can embed a gallery in a part of the Wordpress template where content is not pulled using the Wordpress Loop.
+		   An example usage of this function to embed a gallery is:
+		</p>
+
+<pre>
+    &lt;?php echo do_shortcode('[novagallery id="1"]'); ?&gt;
+</pre>
+
+
+		<h4>Special Notes for IE</h4>
+
+		<p>IE8 and below needs a special javascript file to be declared in the header of your WP theme, in the <code>&lthead&gt;</code>, in order to make it
+		   recognize new HTML5 tags that are required to make the entire gallery work correctly. You should declare the file in the header in the following way:
+		</p>
+
+<pre>
+&lt;!--[if lt IE 9]&gt;
+	&lt;script src=&quot;http://html5shiv.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+</pre>
+
+		<p>IE also needs the <a href="http://css3pie.com">CSS3 PIE</a> file in order for modern CSS3 styles that this gallery uses, to be rendered there. You must place the PIE.htc file that is
+		   present in the <strong>css</strong> folder of the plugin, in the root of your site so that it is loaded in IE. Also IE9 is very strict regarding mime-types,
+		   so if you find that the htc file is not being loaded in IE9 then you must set the correct mime-type as
+		</p>
+
+<pre>
+AddType text/x-component .htc
+</pre>
+
+
+		<hr>
+
+
+
+
+		<p>I hope that you like this item and it makes your web page more stunning. If you find any bugs then don't hesitate to let me know. Also if you want to see some
+		   new features in this item or have any ideas to make the overall item much better then you can send me the details. All future updates are of course free !
+		</p>
+
+		<p>Once again, thank you so much for purchasing this item. As I said at the beginning, I'd be glad to help you if you have any questions
+		relating to this item. No guarantees, but I'll do my best to assist. If you have a more general question relating to the items on Codecanyon,
+		you might consider visiting the forums and asking your question in the "Item Discussion" section.
+		</p>
+
+		<p class="append-bottom alt large"><strong>Nilok Bose</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

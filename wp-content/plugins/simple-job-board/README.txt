@@ -25,6 +25,12 @@ This plugin is extendible and easy to use. A customized job board is created to 
 = Live Demo =
 Please click here for [Simple Job Board Demo](https://jobboardextensions.demo.presstigers.com).
 
+= Product Tour =
+
+You can have a hand's on experience of SJB on our "demo site" and you can also review the video tutorial below on how you can install & configure the SJB plugin on your own website.
+
+[youtube https://www.youtube.com/watch?v=RjkOPtgxFeg]
+
 = Simple Job Board Add-ons =
  
 * [Job Board – Email Notifications Bundle](https://market.presstigers.com/product/job-board-email-notifications-bundle/) (New)

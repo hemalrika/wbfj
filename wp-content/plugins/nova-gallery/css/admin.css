@@ -1,0 +1,251 @@
+input[type=text], select {
+	height: 28px;
+}
+
+#novagallery-settings h3 {
+    margin-top: 40px;
+	padding-top: 40px;
+	border-top: 1px solid #ccc;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+#novagallery-settings h3:first-of-type {
+	padding: 0;
+	border: none;
+}
+
+#flickrOptions, #picasaOptions {
+	margin-top: 40px;
+	border-top: 1px solid #ccc;
+}
+
+#setsList h4 {
+	font-size: 16px;
+}
+
+#formButtons {
+    margin: 40px 0;
+}
+
+#formButtons input {
+    margin-right: 20px;
+}
+
+.form-table label {
+	font-weight: bold;
+}
+
+.uploader {
+	display: inline-block;
+	width: 246px;
+	overflow: hidden;
+}
+
+.uploader .qq-upload-button {
+	padding: 3px 8px;
+	width: auto;
+	line-height: 13px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.uploader .qq-upload-list {
+	margin: 3px 0 3px 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.uploader .qq-upload-list li {
+	font-size: 11px;
+}
+
+.uploader .qq-upload-file {
+	display: inline-block;
+	max-width: 85px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+}
+
+#flickrOptions, #picasaOptions {
+	display: none;
+}
+
+#upload-area {
+	width: 100%;
+	overflow: hidden;
+}
+
+.upload-section {
+	display: inline-block;
+	margin-right: 40px;
+}
+
+#gallerySets, #galleryItems {
+	margin-top: 40px;
+	display: none;
+}
+
+#setsList {
+	margin: 40px 0;
+	position: relative;
+}
+
+#setsList > li {
+	position: relative;
+	overflow: hidden;
+	width: 760px;
+	padding: 20px;
+	border: 1px solid #aaa;
+	margin-bottom: 15px;
+	background: #f7f8f9;
+	border-radius: 3px;
+	cursor: move;
+}
+
+#setsList .items {
+	margin-top: 0;
+}
+
+#itemsList, .items {
+    margin: 40px 0;
+    position: relative;
+    list-style: none;
+}
+
+.items > li {
+    position: relative;
+	overflow: hidden;
+	width: 720px;
+	overflow: hidden;
+    padding: 20px;
+	margin-bottom: 15px;
+	cursor: move;
+    border: 1px solid #e5e5e5;
+    background-color: #f8f8f8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); /* FF3.5 - 3.6 */
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
+
+.items li * {
+	vertical-align: top;
+}
+
+.items .regular-text, .set-details .regular-text {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.items label.main, .set-details label.main {
+    width: 150px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.items .description, .set-details .description {
+	font-size: 11px;
+	display: inline-block;
+	margin: 5px 0 15px 154px;
+}
+
+.items li .description.last {
+	margin-bottom: 0;
+}
+
+.items input, .set-details input {
+	display: inline-block;
+}
+
+.items input[type="radio"] {
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.items .uploadFields {
+	display: inline-block;
+}
+
+.uploadFields:not(.imageUpload) .upload-val:nth-of-type(n+2), .mobileVideo .upload-val {
+	margin-left: 154px;
+}
+
+.items textarea{
+	width: 392px;
+	height: 94px;
+	padding: 3px;
+}
+
+.items .thumbnail, #setsList > li > .thumbnail {
+	position: absolute;
+	top: 20px;
+	right: 104px;
+	width: 100px;
+	height: 56px;
+	padding: 3px;
+	border: 1px solid #ccc;
+}
+
+#setsList > li > .thumbnail {
+	top: 10px;
+}
+
+.items .thumbnail[src=''], #setsList > li > .thumbnail[src=''] {
+	display: none !important;
+}
+
+.items a.delete, #setsList > li > a.delete {
+    width: 22px;
+    height: 22px;
+    background: url(../images/delete.png) no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 64px;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+.items a.collapse, #setsList > li > a.collapse {
+	width: 22px;
+    height: 22px;
+    background: url(../images/collapse.png) no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 37px;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+.items a.expand, #setsList > li > a.expand {
+	width: 22px;
+    height: 22px;
+    background: url(../images/expand.png) no-repeat;
+    position: absolute;
+    top: 10px;
+	right: 10px;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+a.expand.disabled, a.collapse.disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.items a.delete.hide, .items a.expand.hide, .items a.collapse.hide,
+#setsList > li > a.delete.hide, #setsList > li > a.expand.hide, #setsList > li > a.collapse.hide {
+	display: none !important;
+}
+
+.items li:hover a.delete, .items li:hover a.expand, .items li:hover a.collapse,
+#setsList > li:hover > a.delete, #setsList > li:hover > a.expand, #setsList > li:hover > a.collapse {
+	display: block;
+}
