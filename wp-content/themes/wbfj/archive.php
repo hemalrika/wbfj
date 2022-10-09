@@ -30,11 +30,11 @@ get_header();
 							<div class="basic-pagination basic-pagination-2 mb-40">
 								<?php wbfj_pagination( '<i class="far fa-angle-double-left"></i>', '<i class="far fa-angle-double-right"></i>', '', array( 'class' => '' ) ); ?>
 							</div>
-							<?php
-							else:
-								get_template_part( 'template-parts/content', 'none' );
-							?>
 						</div>
+						<?php
+						else:
+							get_template_part( 'template-parts/content', 'none' );
+						?>
 					<?php endif; ?>
 				</div>
 				<?php if(is_active_sidebar('general_sidebar')) : ?>
