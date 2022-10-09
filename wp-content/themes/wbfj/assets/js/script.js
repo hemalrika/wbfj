@@ -180,7 +180,8 @@ reset.call(marquee.children().filter(':first'));
         // elementorFrontend.hooks.addAction('frontend/element_ready/testimonial.default', startAos);
         // elementorFrontend.hooks.addAction('frontend/element_ready/testimonial.default', testimonialSliderActive);
     });
-
+    const swiperSlider = new Swiper('#swiper_slider', {
+      });
 
 
 

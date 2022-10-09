@@ -39,11 +39,19 @@ class GF_Upgrade {
 	public function maybe_display_wizard() {
 
 		$result = false;
+		if ( $this->requires_install_wizard() ) {
 
-		require_once( GFCommon::get_base_path() . '/includes/wizard/class-gf-upgrade-wizard.php' );
-		$wizard = new GF_Upgrade_Wizard;
-		$result = $wizard->display();
+			require_once( GFCommon::get_base_path() . '/includes/wizard/class-gf-installation-wizard.php' );
+			$wizard = new GF_Installation_Wizard;
+			$result = $wizard->display();
 
+		} elseif ( $this->requires_upgrade_wizard() ) {
+
+			require_once( GFCommon::get_base_path() . '/includes/wizard/class-gf-upgrade-wizard.php' );
+			$wizard = new GF_Upgrade_Wizard;
+			$result = $wizard->display();
+
+		}
 
 		return $result;
 	}
@@ -1119,7 +1127,7 @@ HAVING count(*) > 1;" );
 	public function requires_install_wizard() {
 
 		if ( defined( 'GF_LICENSE_KEY' ) && is_multisite() && ! is_main_site() ) {
-			return true;
+			return false;
 		}
 
 		$pending_installation = get_option( 'gform_pending_installation' ) || isset( $_GET['gform_installation_wizard'] );

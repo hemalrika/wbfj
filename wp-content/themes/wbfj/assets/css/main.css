@@ -514,6 +514,31 @@ div#mycrawler a:hover {
   font-weight: 600;
 }
 
+.wbfj-banner-extra-links p {
+  padding-left: 20px;
+  margin-top: 33px;
+}
+
+.wbfj-banner-extra-links p a {
+  color: #222;
+}
+
+.wbfj-banner-extra-links p a:hover {
+  text-decoration: underline;
+}
+
+p.footer-link {
+  background: #222;
+  padding: 30px 0;
+  margin-bottom: 0;
+}
+
+p.footer-link a {
+  font-size: 16px;
+  color: #fff;
+  text-align: left;
+}
+
 .page-heading .title {
   font-size: 27px;
   font-weight: 800;
@@ -1113,6 +1138,174 @@ div#mycrawler a:hover {
   color: #fff;
   background-color: #222;
   padding: 6px 10px;
+}
+
+@media (max-width: 767px) {
+  .blog-widget-style-1 {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+  .blog-widget-style-1 .blog-left {
+    padding-right: 0;
+  }
+  .blog-widget-style-1 .blog-right {
+    padding-left: 0;
+  }
+  .has-header-right-flex {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+}
+@media (min-width: 461px) and (max-width: 767px) {
+  .better-weather[max-width~="2000px"] .bw_degree p {
+    font-size: 16px !important;
+  }
+  div.better-weather.style-normal .bw_currently > * {
+    position: relative;
+    margin: 0 auto;
+  }
+  .better-weather[max-width~="2000px"] .bw_days li {
+    width: 50%;
+  }
+  div.better-weather[max-width~="2000px"] {
+    height: 355px;
+  }
+  .better-weather[max-width~="2000px"] .bw_date-loc {
+    margin: 0 auto;
+  }
+  div.better-weather[max-width~="2000px"] .bw_days {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    top: auto;
+  }
+  .better-weather[max-width~="2000px"] .bw_days li {
+    width: 50%;
+  }
+  div.better-weather.with-natural-background.state-partly-cloudy-day {
+    background-size: cover;
+  }
+  .better-weather[max-width~="2000px"] .bw_degree {
+    width: 100%;
+  }
+  .better-weather[max-width~="2000px"] .bw_up-degree {
+    position: static !important;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .better-weather[max-width~="2000px"] .bw_down-degree {
+    position: static !important;
+  }
+  .better-weather[max-width~="2000px"] .bw_degree p {
+    text-align: left;
+    padding-left: 50px;
+  }
+  .better-weather[max-width~="2000px"] .bw_down-degree, .better-weather[max-width~="2000px"] .bw_up-degree {
+    position: relative;
+  }
+  .better-weather[max-width~="550px"] .bw_summary {
+    width: 50%;
+    position: static !important;
+    transform: translateY(-16px);
+  }
+  .better-weather[max-width~="550px"] .bw_summary {
+    margin: 0 auto;
+  }
+  div.better-weather.have-next-days[max-width~="2000px"] .bw_date-loc {
+    position: static;
+    padding-top: 20px;
+  }
+  div.better-weather.unit-showed[max-width~="2000px"] .bw_degree {
+    position: static;
+    margin-top: 30px;
+  }
+}
+header.page-header .page-title {
+  margin-bottom: 25px;
+  border-bottom: 4px solid #000;
+  padding-bottom: 5px !important;
+  float: left;
+  width: 100%;
+  font-size: 27px;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+}
+
+.blog-content-wrapper .thumb img {
+  max-height: 217px;
+  object-fit: cover;
+}
+
+.blog-content-wrapper .blog-content {
+  padding: 20px 0px;
+}
+
+.blog-content-wrapper .blog-content h4 {
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.wbfj-blog-author-meta .author-name {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.wbfj-blog-author-meta .author-img img {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.wbfj-blog-author-meta .author-name h4 {
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 0;
+}
+
+.wbfj-blog-author-meta .author-img {
+  margin-right: 6px;
+  float: left;
+}
+
+.wbfj-blog-author-meta a:last-child {
+  font-size: 11px;
+  color: #777;
+  font-family: "Oswald";
+}
+
+.wbfj-blog-author-meta a:first-child {
+  margin-right: 5px;
+}
+
+.wbfj-blog-author-meta {
+  padding-bottom: 5px;
+}
+
+.wbfj-blog-bottom-read-more-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wbfj-blog-bottom-read-more-btn a, .wbfj-blog-bottom-read-more-btn span {
+  float: left;
+  font-family: Oswald;
+  text-transform: uppercase;
+  color: #222 !important;
+  font-size: 14px;
+}
+
+.wbfj-blog-bottom-read-more-btn a:hover {
+  text-decoration: underline;
+}
+
+.wbfj-blog-bottom-read-more-btn {
+  border-bottom: 3px solid #222;
+  padding-bottom: 3px;
+  border-top: 1px solid #ddd;
+  padding-top: 1px;
 }
 
 /*------------------------------------------------------------------------------

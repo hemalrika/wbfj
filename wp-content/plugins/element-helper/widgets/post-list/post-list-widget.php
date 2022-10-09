@@ -508,11 +508,13 @@ class Post_List extends Element_El_Widget {
 		                while ( $posts->have_posts() ): $posts->the_post();
 			                ?>
                             <div class="blog-list">
+								<?php if(!empty(get_the_post_thumbnail( get_the_ID(), 'full' ))) : ?>
                                 <div class="thumb">
                                     <a href="<?php echo get_the_permalink(); ?>">
 		                                <?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
                                     </a>
                                 </div>
+								<?php endif; ?>
                                 <div class="content">
                                     <h3>
 	                                    <?php $title = get_the_title();
@@ -648,11 +650,13 @@ class Post_List extends Element_El_Widget {
 
 									<?php if ( $count !== 1 ): ?>
                                         <div class="blog-list">
+											<?php if(!empty(get_the_post_thumbnail( get_the_ID(), 'full' ))) : ?>
                                             <div class="thumb">
                                                 <a href="<?php echo get_the_permalink(); ?>">
 													<?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
                                                 </a>
                                             </div>
+											<?php endif; ?>
                                             <div class="content">
                                                 <h3>
 													<?php $title = get_the_title();

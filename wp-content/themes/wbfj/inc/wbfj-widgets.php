@@ -43,7 +43,23 @@ function wbfj_widgets_init()
 	register_sidebar(array(
 		'name' => esc_html__('blogsmenu', 'wbfj'),
 		'id' => 'blogsmenu',
-		'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
+		'before_widget' => '<div id="%1$s" class="blogsmenu-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget_title"><h5>',
+		'after_title' => '</h5></div>',
+	));
+	register_sidebar(array(
+		'name' => esc_html__('weather', 'wbfj'),
+		'id' => 'weather',
+		'before_widget' => '<div id="%1$s" class="weather-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget_title"><h5>',
+		'after_title' => '</h5></div>',
+	));
+	register_sidebar(array(
+		'name' => esc_html__('General Sidebar', 'wbfj'),
+		'id' => 'general_sidebar',
+		'before_widget' => '<div id="%1$s" class="general-widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<div class="widget_title"><h5>',
 		'after_title' => '</h5></div>',

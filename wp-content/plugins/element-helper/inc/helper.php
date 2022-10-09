@@ -77,6 +77,9 @@ class Helper {
 			'about' => [
 				'title' => __( 'About', 'elementhelper' )
 			],
+			'slider' => [
+				'title' => __( 'Slider', 'elementhelper' )
+			],
 
 		];
 	}

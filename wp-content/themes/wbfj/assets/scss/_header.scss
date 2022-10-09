@@ -140,3 +140,24 @@ $background-color_1: #303030;
   text-align: left;
   font-weight: 600;
 }
+.wbfj-banner-extra-links p {
+  padding-left: 20px;
+  margin-top: 33px;
+}
+
+.wbfj-banner-extra-links p a {
+  color: #222;
+}
+.wbfj-banner-extra-links p a:hover {
+  text-decoration: underline;
+}
+p.footer-link {
+  background: #222;
+  padding: 30px 0;
+  margin-bottom: 0;
+}
+p.footer-link a {
+  font-size: 16px;
+  color: #fff;
+  text-align: left;
+}

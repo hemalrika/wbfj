@@ -10,18 +10,18 @@ function wbfj_scripts() {
 	wp_enqueue_style( 'fontawesome', WBFJ_THEME_CSS_DIR . 'fontawesome.min.css', array() );
 	wp_enqueue_style( 'bootstrap', WBFJ_THEME_CSS_DIR . 'bootstrap.min.css', array() );
 	wp_enqueue_style( 'wbfj-spacing', WBFJ_THEME_CSS_DIR . 'spacing.css', array() );
-//	wp_enqueue_style( 'swiper', WBFJ_THEME_CSS_DIR . 'swiper.min.css', array() );
+	wp_enqueue_style( 'swiper', WBFJ_THEME_CSS_DIR . 'swiper.min.css', array() );
 //	wp_enqueue_style( 'aos', WBFJ_THEME_CSS_DIR . 'aos.css', array() );
 //	wp_enqueue_style( 'meanmenu', WBFJ_THEME_CSS_DIR . 'meanmenu.css', array() );
 //	wp_enqueue_style( 'nice-select', WBFJ_THEME_CSS_DIR . 'nice-select.css', array() );
 //	wp_enqueue_style( 'venobox', WBFJ_THEME_CSS_DIR . 'venobox.min.css', array() );
-	wp_enqueue_style( 'wbfj-main', WBFJ_THEME_CSS_DIR . 'main.css', array() );
+	wp_enqueue_style( 'wbfj-main', WBFJ_THEME_CSS_DIR . 'main.css', array(), time(), false );
 	wp_enqueue_style( 'wbfj-style', get_stylesheet_uri() );
 
 	// all js files
 	wp_enqueue_script( 'popper', WBFJ_THEME_JS_DIR . 'popper.min.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'bootstrap', WBFJ_THEME_JS_DIR . 'bootstrap.min.js', array( 'jquery' ), '', true );
-//	wp_enqueue_script( 'swiper', WBFJ_THEME_JS_DIR . 'swiper.min.js', array( 'jquery' ), '', true );
+	wp_enqueue_script( 'swiper', WBFJ_THEME_JS_DIR . 'swiper.min.js', array( 'jquery' ), '', true );
 //	wp_enqueue_script( 'meanmenu', WBFJ_THEME_JS_DIR . 'jquery.meanmenu.min.js', array( 'jquery' ), '', true );
 //	wp_enqueue_script( 'nice-select', WBFJ_THEME_JS_DIR . 'jquery.nice-select.min.js', array( 'jquery' ), '', true );
 //	wp_enqueue_script( 'venobox', WBFJ_THEME_JS_DIR . 'venobox.min.js', array( 'jquery' ), '', true );
