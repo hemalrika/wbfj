@@ -29,7 +29,7 @@ define( 'DB_USER', 'themsfqg_wbfj' );
 define( 'DB_PASSWORD', '4xlN.aZ757w%' );
 
 /** Database hostname */
-define( 'DB_HOST', '' );
+define( 'DB_HOST', 'localhost' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
