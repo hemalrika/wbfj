@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/themsfqg/repositories/wbfj/
+    - /bin/cp -R * $DEPLOYPATH
