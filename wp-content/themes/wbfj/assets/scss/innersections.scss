@@ -1,0 +1,64 @@
+@use "common" as *;
+
+.cr-crossroad-title {
+    font-size: 34px;
+    line-height: 1.5;
+    font-family: 'Oswald';
+    font-weight: 300;
+}
+.cr-widget-title {
+    border-bottom: 2px solid #222;
+    margin-bottom: 25px;
+}
+.cr-default-sidebar-title {
+    background-color: #222;
+    color: #fff;
+    font-size: 17px;
+    height: 33px;
+    line-height: 33px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    padding: 0px 35px 5px 9px;
+    margin-bottom: 0px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+}
+.cr-default-sidebar-title:after {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    height: 100%;
+    width: 18px;
+    content: "";
+    background-color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 100% );
+}
+
+.gf_browser_gecko.gform_wrapper .gfield_label {
+	font-size: 16px;
+	color: #222;
+	font-weight: 700;
+	margin-bottom: 9px;
+}
+.gf_browser_gecko.gform_wrapper label {
+    font-size: 13px;
+    color: #222;
+}
+
+blockquote {
+	line-height: 25px;
+	font-size: 18px;
+	color: #777;
+	margin: 0 0 18px;
+	padding: 0px 20px 0px 19px;
+	border-left: 5px solid #cccccc;
+}
+blockquote a {
+    color: #222;
+}
+blockquote a:hover {
+    color: #222;
+    text-decoration: underline;
+}
