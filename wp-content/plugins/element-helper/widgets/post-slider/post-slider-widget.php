@@ -1,0 +1,555 @@
+<?php
+
+namespace ElementHelper\Widget;
+
+use \Elementor\Core\Schemes\Typography;
+use \Elementor\Controls_Manager;
+use \Elementor\Group_Control_Border;
+use \Elementor\Group_Control_Box_Shadow;
+use \Elementor\Group_Control_Image_Size;
+use \Elementor\Group_Control_Text_Shadow;
+use \Elementor\Group_Control_Typography;
+use \Elementor\Icons_Manager;
+use \Elementor\Repeater;
+use \Elementor\Core\Schemes;
+use \Elementor\Group_Control_Background;
+use \ElementHelper\Element_El_Select2;
+
+defined( 'ABSPATH' ) || die();
+
+
+class Post_Slider extends Element_El_Widget {
+
+	/**
+	 * Get widget name.
+	 *
+	 * Retrieve Element Helper widget name.
+	 *
+	 * @return string Widget name.
+	 * @since 1.0.0
+	 * @access public
+	 *
+	 */
+	public function get_name() {
+		return 'post_slider';
+	}
+
+	/**
+	 * Get widget title.
+	 *
+	 * @return string Widget title.
+	 * @since 1.0.0
+	 * @access public
+	 *
+	 */
+	public function get_title() {
+		return __( 'Post Slider', 'elementhelper' );
+	}
+
+	public function get_custom_help_url() {
+		return 'http://elementor.sabber.net/widgets/post-slider/';
+	}
+
+	/**
+	 * Get widget icon.
+	 *
+	 * @return string Widget icon.
+	 * @since 1.0.0
+	 * @access public
+	 *
+	 */
+	public function get_icon() {
+		return 'eicon-parallax';
+	}
+
+	public function get_keywords() {
+		return [ 'posts', 'post', 'post-list', 'post-slider', 'news' ];
+	}
+
+	/**
+	 * Get a list of All Post Types
+	 *
+	 * @return array
+	 */
+	public function get_post_types() {
+		$post_types = elh_element_get_post_types( [], [ 'elementor_library', 'attachment' ] );
+
+		return $post_types;
+	}
+
+	protected function register_content_controls() {
+
+
+		$this->start_controls_section(
+			'_section_design_title',
+			[
+				'label' => __( 'Design Style', 'elementhelper' ),
+				'tab'   => Controls_Manager::TAB_CONTENT,
+			]
+		);
+		$this->add_control(
+			'design_style',
+			[
+				'label'              => __( 'Design Style', 'elementhelper' ),
+				'type'               => Controls_Manager::SELECT,
+				'options'            => [
+					'style_1' => __( 'Style 1', 'elementhelper' )
+				],
+				'default'            => 'style_1',
+				'frontend_available' => true,
+				'style_transfer'     => true,
+			]
+		);
+
+		$this->add_control(
+			'title',
+			[
+				'label'       => __( 'Title', 'elementhelper' ),
+				'label_block' => true,
+				'type'        => Controls_Manager::TEXT,
+				'dynamic'     => [
+					'active' => true,
+				]
+			]
+		);
+
+		$this->add_control(
+			'button_text',
+			[
+				'label'       => __( 'Button Text', 'elementhelper' ),
+				'label_block' => true,
+				'type'        => Controls_Manager::TEXT,
+				'dynamic'     => [
+					'active' => true,
+				]
+			]
+		);
+
+		$this->add_control(
+			'button_link',
+			[
+				'label'       => __( 'Button Link', 'elementhelper' ),
+				'label_block' => true,
+				'type'        => Controls_Manager::TEXT,
+				'dynamic'     => [
+					'active' => true,
+				]
+			]
+		);
+
+		$this->end_controls_section();
+
+
+		$this->start_controls_section(
+			'_section_post_list',
+			[
+				'label' => __( 'List', 'elementhelper' ),
+				'tab'   => Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+			'post_type',
+			[
+				'label'   => __( 'Source', 'elementhelper' ),
+				'type'    => Controls_Manager::SELECT,
+				'options' => $this->get_post_types(),
+				'default' => key( $this->get_post_types() ),
+			]
+		);
+
+		$this->add_control(
+			'show_post_by',
+			[
+				'label'   => __( 'Show post by:', 'elementhelper' ),
+				'type'    => Controls_Manager::SELECT,
+				'default' => 'recent',
+				'options' => [
+					'recent'   => __( 'Recent Post', 'elementhelper' ),
+					'selected' => __( 'Selected Post', 'elementhelper' ),
+				],
+
+			]
+		);
+
+		$this->add_control(
+			'posts_per_page',
+			[
+				'label'     => __( 'Item Limit', 'elementhelper' ),
+				'type'      => Controls_Manager::NUMBER,
+				'default'   => 3,
+				'dynamic'   => [ 'active' => true ],
+				'condition' => [
+					'show_post_by' => [ 'recent' ]
+				]
+			]
+		);
+
+
+		$repeater = [];
+
+		foreach ( $this->get_post_types() as $key => $value ) {
+
+			$repeater[ $key ] = new Repeater();
+
+			$repeater[ $key ]->add_control(
+				'title',
+				[
+					'label'       => __( 'Title', 'elementhelper' ),
+					'type'        => Controls_Manager::TEXT,
+					'label_block' => true,
+					'placeholder' => __( 'Customize Title', 'elementhelper' ),
+					'dynamic'     => [
+						'active' => true,
+					],
+				]
+			);
+
+			$repeater[ $key ]->add_control(
+				'post_short_text',
+				[
+					'label'       => __( 'Short Content', 'elementhelper' ),
+					'type'        => Controls_Manager::TEXTAREA,
+					'label_block' => true,
+					'placeholder' => __( 'Short Content', 'elementhelper' ),
+					'rows'        => 3,
+					'dynamic'     => [
+						'active' => true,
+					],
+				]
+			);
+
+
+			$repeater[ $key ]->add_control(
+				'service_author_name',
+				[
+					'label'       => __( 'Author Name', 'elementhelper' ),
+					'type'        => Controls_Manager::TEXT,
+					'label_block' => true,
+					'default'     => __( 'Jon Williamson', 'elementhelper' ),
+					'placeholder' => __( 'Author Name', 'elementhelper' ),
+					'dynamic'     => [
+						'active' => true,
+					],
+				]
+			);
+
+
+			$repeater[ $key ]->add_control(
+				'post_id',
+				[
+					'label'        => __( 'Select ', 'elementhelper' ) . $value,
+					'label_block'  => true,
+					'type'         => Element_El_Select2::TYPE,
+					'multiple'     => false,
+					'placeholder'  => 'Search ' . $value,
+					'data_options' => [
+						'post_type' => $key,
+						'action'    => 'elh_element_post_list_query'
+					],
+				]
+			);
+
+
+			$repeater[ $key ]->add_control(
+				'title_tag',
+				[
+					'label'   => __( 'Title HTML Tag', 'elementhelper' ),
+					'type'    => Controls_Manager::CHOOSE,
+					'options' => [
+						'h1' => [
+							'title' => __( 'H1', 'elementhelper' ),
+							'icon'  => 'eicon-editor-h1'
+						],
+						'h2' => [
+							'title' => __( 'H2', 'elementhelper' ),
+							'icon'  => 'eicon-editor-h2'
+						],
+						'h3' => [
+							'title' => __( 'H3', 'elementhelper' ),
+							'icon'  => 'eicon-editor-h3'
+						],
+						'h4' => [
+							'title' => __( 'H4', 'elementhelper' ),
+							'icon'  => 'eicon-editor-h4'
+						],
+						'h5' => [
+							'title' => __( 'H5', 'elementhelper' ),
+							'icon'  => 'eicon-editor-h5'
+						],
+						'h6' => [
+							'title' => __( 'H6', 'elementhelper' ),
+							'icon'  => 'eicon-editor-h6'
+						]
+					],
+					'default' => 'h4',
+					'toggle'  => false,
+				]
+			);
+
+			$repeater[ $key ]->add_control(
+				'align',
+				[
+					'label'     => __( 'Alignment', 'elementhelper' ),
+					'type'      => Controls_Manager::CHOOSE,
+					'options'   => [
+						'left'   => [
+							'title' => __( 'Left', 'elementhelper' ),
+							'icon'  => 'fa fa-align-left',
+						],
+						'center' => [
+							'title' => __( 'Center', 'elementhelper' ),
+							'icon'  => 'fa fa-align-center',
+						],
+						'right'  => [
+							'title' => __( 'Right', 'elementhelper' ),
+							'icon'  => 'fa fa-align-right',
+						],
+					],
+					'toggle'    => true,
+					'selectors' => [
+						'{{WRAPPER}}' => 'text-align: {{VALUE}};'
+					]
+				]
+			);
+
+			$this->add_control(
+				'selected_list_' . $key,
+				[
+					'label'       => '',
+					'type'        => Controls_Manager::REPEATER,
+					'fields'      => $repeater[ $key ]->get_controls(),
+					'title_field' => '{{ title }}',
+					'condition'   => [
+						'show_post_by' => 'selected',
+						'post_type'    => $key
+					],
+				]
+			);
+		}
+
+		$this->end_controls_section();
+
+	}
+
+	protected function register_style_controls() {
+
+		$this->start_controls_section(
+			'_section_media_style',
+			[
+				'label' => __( 'Icon / Image', 'elementhelper' ),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_responsive_control(
+			'icon_size',
+			[
+				'label' => __( 'Style Tab', 'elementhelper' ),
+				'type'  => Controls_Manager::HEADING,
+			]
+		);
+
+		$this->end_controls_section();
+
+	}
+
+	protected function render() {
+
+		$settings = $this->get_settings_for_display();
+		if ( ! $settings['post_type'] ) {
+			return;
+		}
+		$args = [
+			'post_status' => 'publish',
+			'post_type'   => $settings['post_type'],
+		];
+		if ( 'recent' === $settings['show_post_by'] ) {
+			$args['posts_per_page'] = $settings['posts_per_page'];
+		}
+
+		$selected_post_type = 'selected_list_' . $settings['post_type'];
+
+		$customize_title = [];
+		$ids             = [];
+		if ( 'selected' === $settings['show_post_by'] ) {
+			$args['posts_per_page'] = - 1;
+			$lists                  = $settings[ 'selected_list_' . $settings['post_type'] ];
+			if ( ! empty( $lists ) ) {
+				foreach ( $lists as $index => $value ) {
+					$post_id = ! empty( $value['post_id'] ) ? $value['post_id'] : 0;
+					$ids[]   = $post_id;
+					if ( $value['title'] ) {
+						$customize_title[ $post_id ] = $value['title'];
+					}
+				}
+			}
+			$args['post__in'] = (array) $ids;
+			$args['orderby']  = 'post__in';
+		}
+
+		if ( 'selected' === $settings['show_post_by'] && empty( $ids ) ) {
+			$posts = [];
+		} else {
+			$posts = new \WP_Query( $args );
+		}
+
+		$title = elh_element_kses_basic( $settings['title'] );
+
+		$this->add_render_attribute( 'title', 'class', 'item_title' );
+
+		if ( ! empty( $settings['design_style'] ) and $settings['design_style'] == 'style_2' ): ?>
+
+		<?php else: ?>
+            <div class="widget-wrapper ">
+				<div class="post-title-wrapper">
+				<div class="post-slider-navigation">
+					<span class="post-slider-next"><i class="fa-regular fa-angle-left"></i></span>
+					<span class="post-slider-prev"><i class="fa-regular fa-angle-right"></i></span>
+					
+				</div>
+				<?php if ( ! empty( $settings['title'] ) ) : ?>
+                    <h4 class="widget-title">
+                        <span><?php echo elh_element_kses_basic( $settings['title'] ); ?></span>
+                    </h4>
+				<?php endif; ?>
+				</div>
+                <div class="blog-widget-style-1">
+					<?php
+					if ( ! empty( $posts->have_posts() ) ): ?>
+						<?php
+						$count = 0;
+						while ( $posts->have_posts() ): $posts->the_post();
+							?>
+
+							<?php if ( $count === 1 ): ?>
+                                <div class="blog-left">
+                                    <div class="thumb">
+                                        <a href="<?php echo get_the_permalink(); ?>">
+											<?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
+                                        </a>
+                                    </div>
+                                    <div class="content">
+                                        <h3>
+											<?php $title = get_the_title();
+											if ( 'selected' === $settings['show_post_by'] && array_key_exists( get_the_ID(), $customize_title ) ) {
+												$title = $customize_title[ get_the_ID() ];
+											}
+											printf( '<a href="%2$s">%1$s</a>',
+												esc_html( $title ),
+												esc_url( get_the_permalink( get_the_ID() ) )
+											);
+											?>
+                                        </h3>
+
+                                        <div class="author-wrap">
+                                            <div class="profile-img">
+												<?php print get_avatar( get_the_author_meta( 'user_email' ), 50, '', '', [ 'class' => 'media-object img-circle' ] ); ?>
+                                            </div>
+                                            <span class="name">
+                                                <a href="<?php print esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
+                                                    <?php echo get_the_author_meta( 'nicename', get_the_author_meta( get_the_ID() ) ); ?>
+                                                </a>
+                                            </span>
+                                            <span class="date">
+                                                    <i class="fa-regular fa-clock"></i> <?php echo get_the_date( 'M d, Y' ); ?>
+                                            </span>
+                                        </div>
+                                        <div class="text">
+                                            <p><?php echo get_the_excerpt(); ?></p>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="read-more">
+                                            <a href="<?php echo get_the_permalink(); ?>">READ MORE</a>
+                                        </div>
+                                        <div class="comments">
+											<?php print esc_html( 'Comment', '' ); ?> (<?php comments_number(); ?>)
+                                        </div>
+                                    </div>
+                                </div>
+							<?php endif; ?>
+
+							<?php $count ++; endwhile;
+						wp_reset_query(); ?>
+					<?php
+					else:
+						printf( '%1$s %2$s %3$s',
+							__( 'No ', 'elementhelper' ),
+							esc_html( $settings['post_type'] ),
+							__( 'Found', 'elementhelper' )
+						);
+					endif;
+					?>
+                    <div class="blog-right">
+
+                        <div class="blog-list-wrap">
+						<?php
+											if ( ! empty( $posts->have_posts() ) ): ?>
+										<div class="swiper-container swiper post-slider-active">
+											<div class="swiper-wrapper">
+											
+												<?php
+												$count = 0;
+												while ( $posts->have_posts() ): $posts->the_post();
+													?>
+
+													<?php if ( $count !== 1 ): ?>
+												<div class="swiper-slide">
+													<div class="blog-list">
+														<div class="thumb">
+															<a href="<?php echo get_the_permalink(); ?>">
+																<?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
+															</a>
+														</div>
+														<div class="content">
+															<h3>
+																<?php $title = get_the_title();
+																if ( 'selected' === $settings['show_post_by'] && array_key_exists( get_the_ID(), $customize_title ) ) {
+																	$title = $customize_title[ get_the_ID() ];
+																}
+																printf( '<a href="%2$s">%1$s</a>',
+																	esc_html( $title ),
+																	esc_url( get_the_permalink( get_the_ID() ) )
+																);
+																?>
+															</h3>
+															<div class="author-wrap">
+																<div class="profile-img">
+																	<?php print get_avatar( get_the_author_meta( 'user_email' ), 50, '', '', [ 'class' => 'media-object img-circle' ] ); ?>
+																</div>
+																<span class="name">
+																	<a href="<?php print esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
+																		<?php echo get_the_author_meta( 'nicename', get_the_author_meta( get_the_ID() ) ); ?>
+																	</a>
+																</span>
+																<span class="date">
+																	<i class="fa-regular fa-clock"></i> <?php echo get_the_date( 'M d, Y' ); ?>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<?php endif; ?>
+
+												<?php $count ++; endwhile;
+												wp_reset_query(); ?>
+											</div>
+										</div>
+									
+							<?php
+							else:
+								printf( '%1$s %2$s %3$s',
+									__( 'No ', 'elementhelper' ),
+									esc_html( $settings['post_type'] ),
+									__( 'Found', 'elementhelper' )
+								);
+							endif;
+							?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		<?php endif;
+	}
+}

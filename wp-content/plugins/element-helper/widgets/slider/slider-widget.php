@@ -39,7 +39,7 @@ class Slider extends Element_El_Widget {
 	 *
 	 */
 	public function get_title() {
-		return __( 'Slider WBFJ', 'elementhelper' );
+		return __( 'Slider Image', 'elementhelper' );
 	}
 
 	/**
@@ -161,14 +161,22 @@ class Slider extends Element_El_Widget {
 		?>
 		<?php if ( $settings['design_style'] === 'style-1' ): ?>
             <?php if(!empty($settings['slides'])) : ?>
-            <div id="swiper_slider" class="swiper_slider swiper-container">
-                <?php foreach($settings['slides'] as $slide) :?>
-                <div class="swiper-slide">
-                    <a href="<?php echo esc_url($slide['slide_url']['url']) ? esc_url($slide['slide_url']['url']) : ''; ?>">
-                        <img src="<?php echo esc_url($slide['slide_image']['url']) ?>" alt="">
-                    </a>
-                </div> 
-                <?php endforeach; ?>
+            <div id="swiper_slider" class="swiper_slider swiper-container swiper">
+				<div class="swiper-wrapper">
+					<?php foreach($settings['slides'] as $slide) :?>
+					<div class="swiper-slide">
+						<a href="<?php echo esc_url($slide['slide_url']['url']) ? esc_url($slide['slide_url']['url']) : ''; ?>">
+							<img src="<?php echo esc_url($slide['slide_image']['url']) ?>" alt="img">
+						</a>
+					</div> 
+					<?php endforeach; ?>
+				</div>
+				<div class="slider-image-pagination"></div>
+				<div class="slider-image-navigation">
+				<span class="image-prev"><i class="fa-regular fa-angle-left"></i></span>
+					<span class="image-next"><i class="fa-regular fa-angle-right"></i></span>
+					
+				</div>
             </div>
             <?php endif; ?>
 		<?php endif; ?>

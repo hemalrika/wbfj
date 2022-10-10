@@ -1395,6 +1395,75 @@ blockquote a:hover {
   text-decoration: underline;
 }
 
+.blog-list-wrap .swiper-wrapper {
+  max-height: 400px;
+}
+
+.blog-list-wrap .swiper-slide {
+  max-height: 101px;
+}
+
+.post-title-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.post-slider-navigation {
+  position: absolute;
+  right: 0;
+}
+
+.post-slider-navigation span {
+  background-color: #222;
+  display: inline-block;
+  padding: 0 5px;
+  color: #fff;
+}
+
+.slider-image-pagination span {
+  width: 11px;
+  height: 11px;
+  background-color: #666;
+}
+
+.slider-image-pagination.swiper-pagination-bullets {
+  text-align: center;
+}
+
+#swiper_slider {
+  position: relative;
+  z-index: 1;
+}
+
+.slider-image-navigation span {
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transition: 0.3s;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 35px;
+  font-weight: 900;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slider-image-navigation span.image-next {
+  left: auto;
+  right: -10px;
+}
+
+#swiper_slider:hover .slider-image-navigation span {
+  left: 20px;
+  opacity: 1;
+  visibility: visible;
+}
+
+#swiper_slider:hover .slider-image-navigation span.image-next {
+  right: 20px;
+  left: auto;
+}
+
 /*------------------------------------------------------------------------------
 	Template Name: Starter Project Template.
 -------------------------------------------------------------------------------*/

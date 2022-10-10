@@ -181,8 +181,25 @@ reset.call(marquee.children().filter(':first'));
         // elementorFrontend.hooks.addAction('frontend/element_ready/testimonial.default', testimonialSliderActive);
     });
     const swiperSlider = new Swiper('#swiper_slider', {
+        pagination: {
+            el: ".slider-image-pagination",
+          },
+        navigation: {
+            nextEl: ".image-next",
+            prevEl: ".image-prev",
+        },
       });
 
+      
+      var postSliderActive = new Swiper(".post-slider-active", {
+        direction: "vertical",
+        slidesPerView: 4,
+        loop: true,
+        navigation: {
+            nextEl: ".post-slider-next",
+            prevEl: ".post-slider-prev",
+          },
+      });
 
 
 })(jQuery);

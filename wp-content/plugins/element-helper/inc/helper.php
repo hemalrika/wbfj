@@ -15,6 +15,10 @@ class Helper {
 				'title' => __( 'Post List', 'elementhelper' )
 			],
 
+			'post-slider' => [
+				'title' => __( 'Post Slider', 'elementhelper' )
+			],
+
 			'social' => [
 				'title' => __( 'Social', 'elementhelper' )
 			],
