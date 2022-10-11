@@ -20,13 +20,13 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wbfj' );
+define( 'DB_NAME', 'themsfqg_wbfj' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'themsfqg_wbfj' );
 
 /** Database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', '4xlN.aZ757w%' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
