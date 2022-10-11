@@ -1528,6 +1528,20 @@ blockquote a:hover {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+  height: 50px;
+}
+
+.gform_wrapper .top_label li.gfield.gf_left_third div:not(.ginput_container_date) select.medium {
+  height: 50px;
+  border-color: #ddd;
+}
+
+.gform_wrapper .top_label li.gfield.gf_right_half div:not(.ginput_container_date) select.medium {
+  height: 50px;
+  border-color: #ddd;
+}
+
 /*------------------------------------------------------------------------------
 	Template Name: Starter Project Template.
 -------------------------------------------------------------------------------*/
