@@ -119,3 +119,14 @@ blockquote a:hover {
     right: 20px;
     left: auto;
   }
+  .mc4wp-form-fields label {
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    color: #222;
+    margin-bottom: 9px;
+}
+.mc4wp-form-fields input[type="email"] {
+  width: 100%;
+  padding: 5px 15px;
+}
