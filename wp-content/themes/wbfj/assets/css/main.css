@@ -1521,6 +1521,13 @@ blockquote a:hover {
   -moz-appearance: none;
 }
 
+@media (max-width: 640px) {
+  .wbfj-calendar-event .gform_wrapper ul.gform_fields {
+    grid-column-gap: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 /*------------------------------------------------------------------------------
 	Template Name: Starter Project Template.
 -------------------------------------------------------------------------------*/
