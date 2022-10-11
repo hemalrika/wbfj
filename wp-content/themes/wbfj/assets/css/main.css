@@ -731,7 +731,7 @@ p.footer-link a {
   line-height: 1.3;
   color: #222;
   padding-left: 17px;
-  border-left: 5px solid rgb(204, 204, 204);
+  border-left: 5px solid #cccccc;
 }
 .w-signup-form .w-signup-link a:hover {
   text-decoration: underline;
@@ -743,7 +743,7 @@ p.footer-link a {
 }
 .blog-widget-style-1 .blog-left {
   padding-right: 20px;
-  border-right: 1px solid rgb(230, 230, 230);
+  border-right: 1px solid #e6e6e6;
 }
 .blog-widget-style-1 .blog-left .thumb {
   margin-bottom: 22px;
@@ -838,7 +838,7 @@ p.footer-link a {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 13px;
-  border-bottom: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid #e6e6e6;
   margin-bottom: 10px;
 }
 .blog-widget-style-1 .blog-right .blog-list-wrap .blog-list .thumb {
@@ -991,7 +991,7 @@ p.footer-link a {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 13px;
-  border-bottom: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid #e6e6e6;
   margin-bottom: 10px;
 }
 .blog-widget-style-2 .blog-bottom .blog-list-wrap .blog-list .thumb {
@@ -1145,12 +1145,15 @@ p.footer-link a {
     grid-template-columns: 1fr;
     grid-gap: 30px;
   }
+
   .blog-widget-style-1 .blog-left {
     padding-right: 0;
   }
+
   .blog-widget-style-1 .blog-right {
     padding-left: 0;
   }
+
   .has-header-right-flex {
     flex-direction: column;
     padding: 30px 0;
@@ -1160,19 +1163,24 @@ p.footer-link a {
   .better-weather[max-width~="2000px"] .bw_degree p {
     font-size: 16px !important;
   }
+
   div.better-weather.style-normal .bw_currently > * {
     position: relative;
     margin: 0 auto;
   }
+
   .better-weather[max-width~="2000px"] .bw_days li {
     width: 50%;
   }
+
   div.better-weather[max-width~="2000px"] {
     height: 355px;
   }
+
   .better-weather[max-width~="2000px"] .bw_date-loc {
     margin: 0 auto;
   }
+
   div.better-weather[max-width~="2000px"] .bw_days {
     position: absolute;
     bottom: 0px;
@@ -1180,42 +1188,53 @@ p.footer-link a {
     width: 100%;
     top: auto;
   }
+
   .better-weather[max-width~="2000px"] .bw_days li {
     width: 50%;
   }
+
   div.better-weather.with-natural-background.state-partly-cloudy-day {
     background-size: cover;
   }
+
   .better-weather[max-width~="2000px"] .bw_degree {
     width: 100%;
   }
+
   .better-weather[max-width~="2000px"] .bw_up-degree {
     position: static !important;
     padding-top: 20px;
     padding-bottom: 30px;
   }
+
   .better-weather[max-width~="2000px"] .bw_down-degree {
     position: static !important;
   }
+
   .better-weather[max-width~="2000px"] .bw_degree p {
     text-align: left;
     padding-left: 50px;
   }
+
   .better-weather[max-width~="2000px"] .bw_down-degree, .better-weather[max-width~="2000px"] .bw_up-degree {
     position: relative;
   }
+
   .better-weather[max-width~="550px"] .bw_summary {
     width: 50%;
     position: static !important;
     transform: translateY(-16px);
   }
+
   .better-weather[max-width~="550px"] .bw_summary {
     margin: 0 auto;
   }
+
   div.better-weather.have-next-days[max-width~="2000px"] .bw_date-loc {
     position: static;
     padding-top: 20px;
   }
+
   div.better-weather.unit-showed[max-width~="2000px"] .bw_degree {
     position: static;
     margin-top: 30px;
@@ -1443,6 +1462,19 @@ blockquote a:hover {
 #swiper_slider:hover .slider-image-navigation span.image-next {
   right: 20px;
   left: auto;
+}
+
+.mc4wp-form-fields label {
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  color: #222;
+  margin-bottom: 9px;
+}
+
+.mc4wp-form-fields input[type=email] {
+  width: 100%;
+  padding: 5px 15px;
 }
 
 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
