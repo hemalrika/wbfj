@@ -8,7 +8,7 @@
  */
 ?>
 
-<div class="col-xl-6 col-lg-6 col-md-6 col-6">
+<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
     <div class="blog-content-wrapper">
         <div class="thumb">
             <a href="<?php echo esc_url( get_the_permalink( get_the_ID() ) ); ?>">
@@ -45,3 +45,4 @@
         </div>
     </div>
 </div>
+ 
