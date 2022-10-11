@@ -1477,6 +1477,38 @@ blockquote a:hover {
   padding: 5px 15px;
 }
 
+.cr-miles-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+.cr-miles-content-img {
+  flex: 0 0 130px;
+  margin-left: 20px;
+  max-width: 130px;
+}
+
+.cr-miles-content-wrapper a {
+  font-size: 16px;
+  color: #222;
+  font-weight: 300;
+  font-family: "Oswald";
+}
+
+.cr-miles-semi-title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 34px;
+  margin-bottom: 8px;
+}
+
+.cr-miles-content-wrapper {
+  display: flex;
+}
+
 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
   border: 0;
   border: 1px solid #ddd;
