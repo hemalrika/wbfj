@@ -1,0 +1,52 @@
+.gform_wrapper {
+	input {
+		&:not([type=radio]) {
+			&:not([type=checkbox]) {
+				&:not([type=submit]) {
+					&:not([type=button]) {
+						&:not([type=image]) {
+							&:not([type=file]) {
+								border: 0;
+								border: 1px solid #ddd;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.field_sublabel_below {
+		.ginput_complex.ginput_container {
+			label {
+				color: #222;
+			}
+		}
+	}
+	.top_label {
+		.gfield_label {
+			color: #222;
+		}
+	}
+	.gform_footer {
+		input.button {
+			border: 0;
+			background: #222;
+			color: #fff;
+			display: inline-block;
+			padding: 0 30px;
+			height: 45px;
+			line-height: 45px;
+			font-size: 15px;
+		}
+		input[type=submit] {
+			border: 0;
+			background: #222;
+			color: #fff;
+			display: inline-block;
+			padding: 0 30px;
+			height: 45px;
+			line-height: 45px;
+			font-size: 15px;
+		}
+	}
+}
