@@ -1476,6 +1476,51 @@ blockquote a:hover {
   font-size: 15px;
 }
 
+.wbfj-calendar-event .gform_wrapper ul.gform_fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.wbfj-calendar-event .gform_wrapper ul.gform_fields li input {
+  width: 100%;
+}
+.wbfj-calendar-event .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+  width: 100%;
+  height: 50px;
+  border-color: #ddd;
+  padding: 0 20px;
+  color: #222;
+}
+.wbfj-calendar-event .gform_wrapper select {
+  width: 100%;
+  height: 50px;
+  border-color: #ddd;
+  padding: 0 20px;
+  color: #222;
+}
+.wbfj-calendar-event .gform_wrapper .top_label div.ginput_container {
+  position: relative;
+}
+.wbfj-calendar-event .gform_wrapper img.ui-datepicker-trigger {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.wbfj-calendar-event .gform_wrapper textarea.medium {
+  border-color: #ddd;
+}
+.wbfj-calendar-event .gform_wrapper .gfield_checkbox li label {
+  color: #222;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-left: 3px;
+}
+.wbfj-calendar-event .gform_wrapper.gf_browser_chrome .gfield_time_ampm select {
+  padding: 0 6px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 /*------------------------------------------------------------------------------
 	Template Name: Starter Project Template.
 -------------------------------------------------------------------------------*/
