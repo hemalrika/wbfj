@@ -1606,6 +1606,16 @@ blockquote a:hover {
   border-color: #ddd;
 }
 
+.gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select {
+  width: 100%;
+  height: 50px;
+  border-color: #ddd;
+}
+
+.gform_wrapper ul.gfield_checkbox li label {
+  color: #222;
+}
+
 /*------------------------------------------------------------------------------
 	Template Name: Starter Project Template.
 -------------------------------------------------------------------------------*/
