@@ -104,6 +104,14 @@ function wbfj_widgets_init()
 		'before_title' => '<div class="widget_title"><h5>',
 		'after_title' => '</h5></div>',
 	));
+	register_sidebar(array(
+		'name' => esc_html__('Apply for Local FLAVORS', 'wbfj'),
+		'id' => 'flavors_bundle',
+		'before_widget' => '<div id="%1$s" class="flavors-bundle-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget_title"><h5>',
+		'after_title' => '</h5></div>',
+	));
 
 }
 
