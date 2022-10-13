@@ -1,5 +1,5 @@
 <?php get_header() ?>
-    <div class="blog-section pt-100 pt-md-100 pt-xs-70 pb-50">
+    <div class="blog-section ">
         <div class="container">
             <div class="col-xl-12">
 	            <?php if ( have_posts() ) : ?>

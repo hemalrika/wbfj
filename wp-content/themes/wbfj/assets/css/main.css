@@ -1565,6 +1565,186 @@ blockquote a:hover {
   color: #222;
 }
 
+.gform_wrapper textarea.medium {
+  border-color: #ddd;
+}
+
+.wp-share-button a {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
+.wbfj-prev-next-post-box .wbfj-prev-box span {
+  display: block;
+  font-family: "Oswald";
+}
+
+.wbfj-prev-box.has-next {
+  text-align: right;
+}
+
+.wbfj-prev-next-post-box .wbfj-prev-box a {
+  font-size: 19px;
+  font-family: "Oswald";
+  color: #222;
+}
+
+.wbfj-prev-next-post-box .wbfj-prev-box a:hover {
+  text-decoration: underline;
+}
+
+.wbfj-related-post-thumbnail img {
+  max-height: 130px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.wbfj-related-post-thumbnail {
+  overflow: hidden;
+}
+
+.wbfj-related-post-thumbnail a:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.5);
+}
+
+h3.wbfj-related-post-title {
+  width: 100%;
+  float: left;
+  margin-bottom: 0px;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+.wbfj-related-post-content {
+  display: block;
+  margin-top: 7px;
+}
+
+.wbfj-related-post-author img {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.wbfj-related-post-author a {
+  color: #777;
+  font-family: "Oswald";
+  font-size: 11px;
+}
+
+.wbfj-related-post-date {
+  display: inline-block;
+  font-size: 11px;
+  font-family: "Oswald";
+  color: #777;
+}
+
+.wbfj-related-post-author {
+  display: inline-block;
+  margin-right: 2px;
+}
+
+h4.wbfj-section-curved-title {
+  font-size: 18px;
+  background: #222;
+  display: inline-block;
+  color: #fff;
+  padding: 8px 17px;
+  padding-right: 30px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+h4.wbfj-section-curved-title::after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 30px;
+  height: 101%;
+  top: -1px;
+  right: -1px;
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+
+.wbfj-section-title-area {
+  border-bottom: 2px solid #222;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.wbfj-blog-thumbnail img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+h3.wbfj-blog-single-title {
+  margin-bottom: 0px !important;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e6e6e6;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  display: block;
+  margin-bottom: 5px !important;
+}
+
+.wbfj-related-post-meta.has-wbfj-related-meta-border {
+  border-bottom: 3px solid #222;
+  padding-bottom: 8px;
+}
+
+.wbfj-blog-thumbnail.wbfj-blog-thumbnail-space-bottom {
+  display: block;
+  margin-bottom: 10px;
+}
+
+h3.wbfj-blog-single-title {
+  color: #444;
+}
+
+.abh_box.abh_box_down.abh_box_business .abh_tab_content {
+  border: 1px solid #ddd;
+  margin-top: 30px;
+}
+
+.abh_name.fn.name a {
+  color: #444;
+}
+
+.abh_tab_content .abh_text .abh_job a {
+  color: #444;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+@media (max-width: 767px) {
+  div.abh_tab_content .abh_image {
+    float: none !important;
+  }
+  div.abh_tab_content .abh_text {
+    margin-left: 0 !important;
+    margin-top: 20px;
+  }
+  .abh_tab_content .abh_text .abh_description ul {
+    margin-left: 0 !important;
+  }
+  .wbfj-prev-box.has-next {
+    text-align: left;
+    margin-top: 10px;
+  }
+}
 /*------------------------------------------------------------------------------
 	Template Name: Starter Project Template.
 -------------------------------------------------------------------------------*/
