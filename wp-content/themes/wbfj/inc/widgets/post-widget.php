@@ -45,7 +45,7 @@ Class Latest_posts_sidebar_Widget extends WP_Widget {
                                 </div>
                             </div>
                     </div>
-                <?php endwhile; endif;?>
+                <?php endwhile; endif;?> 
 			</div>
 		<?php echo $after_widget; ?>
 		<?php
