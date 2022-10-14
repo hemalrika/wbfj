@@ -43,8 +43,8 @@ do_action('sjb_before_main_content');
 
 <!-- Start Content Wrapper
 ================================================== -->
-<div class="row">
-    <div class="col-xxl-8">
+<div class="row pb-100">
+    <div class="col-xxl-8 col-xl-8 col-lg-8">
         <div class="sjb-page">
             <div class="sjb-archive-page">
 
@@ -179,7 +179,7 @@ do_action('sjb_before_main_content');
             </div>
         </div>
     </div>
-    <div class="col-xxl-4">
+    <div class="col-xxl-4 col-xl-4 col-lg-4">
         <?php if(is_active_sidebar( 'general_sidebar' )) : ?>
             <?php echo dynamic_sidebar( 'general_sidebar' ); ?>
         <?php endif; ?>

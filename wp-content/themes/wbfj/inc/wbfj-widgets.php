@@ -128,6 +128,38 @@ function wbfj_widgets_init()
 		'before_title' => '<div class="widget_title"><h5>',
 		'after_title' => '</h5></div>',
 	));
+	register_sidebar(array(
+		'name' => esc_html__('BE A WBFJ VOLUNTEER', 'wbfj'),
+		'id' => 'be_a_wbfj_volunteer',
+		'before_widget' => '<div id="%1$s" class="be_a_wbfj_volunteer-bundle-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget_title"><h5>',
+		'after_title' => '</h5></div>',
+	));
+	register_sidebar(array(
+		'name' => esc_html__('WBFJ’S LOCAL FLAVORS', 'wbfj'),
+		'id' => 'wbfjs_local_favors',
+		'before_widget' => '<div id="%1$s" class="wbfjs_local_favors-bundle-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget_title"><h5>',
+		'after_title' => '</h5></div>',
+	));
+	register_sidebar(array(
+		'name' => esc_html__('SUBMIT YOUR PHOTOS', 'wbfj'),
+		'id' => 'submit_your_photos',
+		'before_widget' => '<div id="%1$s" class="submit_your_photos-bundle-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget_title"><h5>',
+		'after_title' => '</h5></div>',
+	));
+	register_sidebar(array(
+		'name' => esc_html__('DRIVE-THRU DIFFERENCE', 'wbfj'),
+		'id' => 'drive_thru_diffrence',
+		'before_widget' => '<div id="%1$s" class="drive_thru_diffrence-bundle-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget_title"><h5>',
+		'after_title' => '</h5></div>',
+	));
 
 }
 

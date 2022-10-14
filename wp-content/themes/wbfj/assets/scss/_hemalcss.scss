@@ -332,3 +332,28 @@ h3.wbfj-blog-single-title {
     background: #222;
     color: #fff;
 }
+.list-view .accordion-item:first-of-type .accordion-button {
+    background: #292A66;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+}
+
+.list-view h2 {
+    margin-top: 0;
+}
+
+.list-view .accordion-item:first-of-type .accordion-button::after {
+    display: none;
+}
+
+.gform_wrapper ul.gfield_checkbox li label, .gform_wrapper ul.gfield_radio li label {
+    color: #222;
+}
+.sjb-page .list-data .v1 {
+    padding: 30px 25px;
+}
+.pb-100 {
+	padding-bottom: 100px;
+}
