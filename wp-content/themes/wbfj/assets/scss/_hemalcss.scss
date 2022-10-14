@@ -296,3 +296,39 @@ h3.wbfj-blog-single-title {
 		margin-top: 10px;
 	}
 }
+.job-info span.job-title {
+    font-size: 20px;
+    font-family: 'Oswald';
+    color: #3b3a3c !important;
+    transition: all .3s;
+}
+
+.job-info h4 a:hover span.job-title {
+    color: #3297fa !important;
+}
+.sjb-archive-page h3 span.job-title {
+    font-size: 25px;
+    font-family: Oswald,sans-serif;
+    color: #444 !important;
+    border-bottom: 5px solid #222;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 12px;
+}
+.sjb-page .list-data .v1 .job-description {
+    font-size: 16px;
+    font-family: Open Sans !important;
+}
+.wbfj-read-more-btn a {
+    background: #3297fa;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 17px;
+    border-radius: 5px;
+    margin-top: 16px;
+}
+.wbfj-read-more-btn a:hover {
+    background: #222;
+    color: #fff;
+}

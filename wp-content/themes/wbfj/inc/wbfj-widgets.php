@@ -120,6 +120,14 @@ function wbfj_widgets_init()
 		'before_title' => '<div class="widget_title"><h5>',
 		'after_title' => '</h5></div>',
 	));
+	register_sidebar(array(
+		'name' => esc_html__('Job Listing Register', 'wbfj'),
+		'id' => 'job_listing_register',
+		'before_widget' => '<div id="%1$s" class="job_listing_register-bundle-widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget_title"><h5>',
+		'after_title' => '</h5></div>',
+	));
 
 }
 

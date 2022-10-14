@@ -48,7 +48,7 @@ do_action('sjb_before_main_content');
 
         <!-- Start Job Title
         ================================================== -->    
-        <h3><span class="job-title"><?php echo apply_filters('sjb_jobs_archive_title', esc_html__('Job Archives', 'simple-job-board')); ?></span></h3>
+        <h3><span class="job-title"><?php echo apply_filters('sjb_jobs_archive_title', esc_html__('Job Archivess', 'simple-job-board')); ?></span></h3>
         <!-- ==================================================
         End Job Title -->
 
@@ -79,14 +79,12 @@ do_action('sjb_before_main_content');
         
         // Job Query
         $job_query = new WP_Query($args);
-
         /**
          * Fires before listing jobs on job listing page.
          * 
          * @since   2.2.0
          */
         do_action( 'sjb_job_filters_before' );
-
         /**
          * Template -> Job Filters:
          * 
@@ -104,19 +102,16 @@ do_action('sjb_before_main_content');
          * @since   2.2.0
          */
         do_action('sjb_before_job_archive_start');
-
         /**
          * Template -> Job Listing Start:
          * 
          * - SJB Starting Content Wrapper div.
          */
         get_simple_job_board_template( 'listing/job-listings-start.php' );
-
         if ($job_query->have_posts()):
             global $counter;
             $counter = 1;
             while ($job_query->have_posts()): $job_query->the_post();
-
                 /**
                  * Hook -> sjb_job_listing_view
                  * 

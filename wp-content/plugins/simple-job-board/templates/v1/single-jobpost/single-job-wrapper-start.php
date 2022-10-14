@@ -23,7 +23,7 @@ if (FALSE !== get_option('job_post_layout_settings')) {
 ob_start();
 ?>
 <!-- Start: Jobs Listing Wrapper -->
-<div class="sjb-page">
+<div class="sjb-pagesssssssssssssssssssssssssssssssssssssssssssssss">
     <div class="sjb-detail">
         <div class="list-data">
             <div class="<?php echo esc_attr( $job_class ); ?>">
