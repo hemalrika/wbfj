@@ -29,6 +29,9 @@ include_once WBFJ_THEME_INC . 'class-navwalker.php';
 // initialize breadcrumb
 include_once WBFJ_THEME_INC . 'class-breadcrumb.php';
 
+//  wbfj widgets
+include_once WBFJ_THEME_INC . 'widgets/post-widget.php';
+
 // Custom template helper function for this theme
 require WBFJ_THEME_INC . 'template-helper.php';
 
