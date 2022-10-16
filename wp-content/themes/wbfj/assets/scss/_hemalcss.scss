@@ -357,3 +357,35 @@ h3.wbfj-blog-single-title {
 .pb-100 {
 	padding-bottom: 100px;
 }
+.mega-sub-menu .menu-blog-menu-container  ul li a {
+    color: #fff;
+    font-family: Oswald !important;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 15px;
+    font-weight: 800;
+    font-size: 15px !important;
+    text-transform: uppercase;
+    border-top: 1px solid #ffffff45;
+}
+
+.mega-sub-menu .menu-blog-menu-container ul li {
+    padding: 0;
+    list-style: none;
+}
+
+.mega-sub-menu .menu-blog-menu-container ul {
+    padding: 0;
+}
+
+#mega-menu-wrap-main-menu #mega-menu-main-menu li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row .mega-menu-column > ul.mega-sub-menu > li.mega-menu-item {
+    padding: 0;
+}
+
+.mega-sub-menu .menu-blog-menu-container ul li a:hover {
+    background: rgba(255,255,255,.2);
+}
+
+#mega-menu-wrap-main-menu #mega-menu-main-menu li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row {
+    border-top: 3px solid rgba(255,255,255,0.4);
+}
