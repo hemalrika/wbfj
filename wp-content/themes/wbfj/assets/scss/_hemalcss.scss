@@ -429,3 +429,17 @@ ul.mega-sub-menu .wbfj-post-image-widget-wrapper span.wbfj-post-image-single-tex
 ul.mega-sub-menu .wbfj-post-image-widget-wrapper span.wbfj-post-image-single-text-date i {
     margin-right: 6px;
 }
+ul.mega-sub-menu a.wbfj-post-image-admin-img {
+    color: #fff;
+}
+ul.mega-sub-menu .wbfj-post-image-single-text {
+    padding-top: 11px;
+}
+
+.mega-sub-menu h4.popular-post-title {
+    margin-bottom: 6px;
+}
+#mega-menu-wrap-main-menu #mega-menu-main-menu li.mega-menu-item.mega-menu-megamenu ul.mega-sub-menu ul.mega-sub-menu {
+    display: flex;
+    grid-gap: 20px;
+}
