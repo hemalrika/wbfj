@@ -445,7 +445,7 @@ ul.mega-sub-menu .wbfj-post-image-single-text {
 }
 @media (max-width: 991px) {
 	
-	#mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu {float: none;overflow: hidden;display: block;}
+	#mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu {float: none;overflow: hidden;}
 	
 	#mega-menu-wrap-main-menu #mega-menu-main-menu li.mega-menu-item.mega-menu-megamenu ul.mega-sub-menu ul.mega-sub-menu {
 		display: block;
@@ -489,4 +489,16 @@ ul.mega-sub-menu .wbfj-post-image-single-text {
 	#mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item {
 		margin: 0 !important;
 	}
+}
+@media (max-width: 767px) {
+	li.mega-menu-column.mega-menu-columns-3-of-12 .wbfj-post-image-single-img {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+		margin-top: 20px;
+	}
+}
+#mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+    font-weight: 600;
+    font-family: 'Oswald';
 }
