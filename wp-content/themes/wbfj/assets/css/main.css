@@ -2025,6 +2025,14 @@ div#mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-m
   font-weight: 600;
 }
 
+.swiper_slider .swiper-slide a {
+  display: block;
+}
+
+.swiper_slider .swiper-slide a img {
+  width: 100%;
+}
+
 /*------------------------------------------------------------------------------
 	Template Name: Starter Project Template.
 -------------------------------------------------------------------------------*/
