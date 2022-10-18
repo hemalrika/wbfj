@@ -2021,6 +2021,10 @@ ul.mega-sub-menu .wbfj-post-image-single-text {
     overflow: hidden;
   }
 }
+div#mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link:hover {
+  font-weight: 600;
+}
+
 /*------------------------------------------------------------------------------
 	Template Name: Starter Project Template.
 -------------------------------------------------------------------------------*/
