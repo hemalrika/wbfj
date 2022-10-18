@@ -518,4 +518,10 @@ ul.mega-sub-menu .wbfj-post-image-single-text {
 	#mega-menu-wrap-main-menu #mega-menu-main-menu li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row > ul.mega-sub-menu > li.mega-menu-columns-3-of-12 {
 		width: 50%;
 	}
+	ul.mega-sub-menu .wbfj-post-image-single-text {
+		overflow: hidden;
+	}
+}
+.transform-position {
+	transform: translate(-50%, -50%);
 }
