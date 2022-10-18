@@ -502,3 +502,17 @@ ul.mega-sub-menu .wbfj-post-image-single-text {
     font-weight: 600;
     font-family: 'Oswald';
 } 
+@media (min-width: 769px) and (max-width: 991px) {
+	#mega-menu-wrap-main-menu #mega-menu-main-menu li.mega-menu-item.mega-menu-megamenu ul.mega-sub-menu ul.mega-sub-menu {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#mega-menu-wrap-main-menu #mega-menu-main-menu li.mega-menu-item.mega-menu-megamenu ul.mega-sub-menu ul.mega-sub-menu > * {
+		flex: 0 0 calc( 50% - 15px) !important;
+	}
+	#mega-menu-wrap-main-menu #mega-menu-main-menu li.mega-menu-item.mega-menu-megamenu ul.mega-sub-menu ul.mega-sub-menu ul.mega-sub-menu {
+		display: block;
+		padding-top: 10px;
+		padding-bottom: 16px;
+	}
+}
