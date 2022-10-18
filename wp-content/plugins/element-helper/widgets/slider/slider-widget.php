@@ -160,25 +160,17 @@ class Slider extends Element_El_Widget {
 		$settings = $this->get_settings_for_display();
 		?>
 		<?php if ( $settings['design_style'] === 'style-1' ): ?>
-            <?php if(!empty($settings['slides'])) : ?>
-            <div id="swiper_slider" class="swiper_slider swiper-container swiper">
-				<div class="swiper-wrapper">
+			<?php if(!empty($settings['slides'])) : ?>
+			<div class="nivo-slider-wrapper">
+				<div id="slider" class="nivoSlider">
 					<?php foreach($settings['slides'] as $slide) :?>
-					<div class="swiper-slide">
 						<a href="<?php echo esc_url($slide['slide_url']['url']) ? esc_url($slide['slide_url']['url']) : ''; ?>">
 							<img src="<?php echo esc_url($slide['slide_image']['url']) ?>" alt="img">
 						</a>
-					</div> 
 					<?php endforeach; ?>
 				</div>
-				<div class="slider-image-pagination"></div>
-				<div class="slider-image-navigation">
-				<span class="image-prev"><i class="fa-regular fa-angle-left"></i></span>
-					<span class="image-next"><i class="fa-regular fa-angle-right"></i></span>
-					
-				</div>
-            </div>
-            <?php endif; ?>
+			</div>
+			<?php endif; ?>
 		<?php endif; ?>
 		<?php
 	}

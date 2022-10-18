@@ -64,6 +64,9 @@
     --------------------------------------------- */
 
     let win = $(window);
+    win.on('load', function() {
+        $('#slider').nivoSlider();
+    });
     let sticky_id = $(".header-area");
     win.on('scroll', function () {
         let scroll = win.scrollTop();
@@ -200,6 +203,6 @@ reset.call(marquee.children().filter(':first'));
             prevEl: ".post-slider-prev",
           },
       });
-
+     
 
 })(jQuery);

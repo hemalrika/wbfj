@@ -167,7 +167,7 @@ class Banner extends Element_El_Widget {
 		$settings = $this->get_settings_for_display();
 		?>
 		<?php if ( $settings['design_style'] === 'style_6' ): ?>
-
+			
 		<?php else: ?>
             <div class="widget-wrapper">
                 <div class="w-banner">
